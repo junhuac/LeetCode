@@ -59,7 +59,7 @@ public:
 
 		Node* parent = root;
 
-		while (Node1 || Node2)
+		while (carry || Node1 || Node2)
 		{
 			node = new Node();
 

@@ -24,7 +24,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	Solution solution;
 	Node*  Node1 = new Node(vector<int>({ 1, 4, 6 }));
-	Node*  Node2 = new Node(vector<int>({ 4, 8, 9, 0 }));
+	Node*  Node2 = new Node(vector<int>({ 4, 8, 9 }));
 	
 	Node* result = solution.AddTwoNumbers(Node1, Node2);
 
