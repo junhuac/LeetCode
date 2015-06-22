@@ -15,12 +15,19 @@ Problem:
 	Assume a single host deployment
 */
 
+#include <string>
+#include <map>
+#include <algorithm>
+
+using namespace std;
+
 typedef map<string, int> MAP;
 
 class MobileAd
 {
 public:
 	MobileAd() {}
+	MobileAd(vector<string> Ad) { m_Ad = Ad; }
 	~MobileAd() {}
 
 	string getMobileAd(string userId)
@@ -31,10 +38,9 @@ public:
 		m_AllUsers[userId]++;
 		//LeaveCriticalSection();
 
-		return m_Ad[index++/m_Ad.size()];
+		return m_Ad[index++ % m_Ad.size()];
 	}
 
-protected:
 	MAP getTopUsers()
 	{
 		MAP TopUsers;
@@ -45,7 +51,7 @@ protected:
 			return m_AllUsers;
 		}
 
-		for (MAP::iterator it = m_AllUsers.begin(); it < m_AllUsers.end(); it++)
+		for (MAP::iterator it = m_AllUsers.begin(); it != m_AllUsers.end(); it++)
 		{
 			Frequencies.push_back(it->second);
 		}
@@ -53,9 +59,9 @@ protected:
 		sort(Frequencies.begin(), Frequencies.end());
 
 
-		for (MAP::iterator it = m_AllUsers.begin(); it < m_AllUsers.end(); it++)
+		for (MAP::iterator it = m_AllUsers.begin(); it != m_AllUsers.end(); it++)
 		{
-			if (it->second > Frequencies[Frequencies.size()-99])
+			if (it->second >= Frequencies[Frequencies.size() - 100])
 			{
 				TopUsers[it->first] = it->second;
 			}
