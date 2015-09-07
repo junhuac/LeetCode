@@ -1,7 +1,11 @@
-// DragonChallenge.cpp : Defines the entry point for the DragonChallenge console application.
-//
+/*
+Author: Junhua Chang
+Email: junhuac@hotmail.com
+Date: 09/06/2015
+File: TestDragonChallenge.cpp
+Purpose: Defines the entry point for the DragonChallenge console application.
+*/
 
-#include "stdafx.h"
 #include <iostream>
 
 #include "DragonChallenge.h"
@@ -10,7 +14,7 @@ using namespace std;
 
 const int maxdigits = 20;
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
 	Solution solution;
 	vector<int> valley;
