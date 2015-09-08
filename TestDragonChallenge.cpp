@@ -8,7 +8,7 @@ Purpose: Defines the entry point for the unit test console application.
 
 #include <iostream>
 
-#include "DragonChallenge.h"
+#include "DragonChallenge1.h"
 
 using namespace std;
 
