@@ -1,14 +1,13 @@
-// LeetCode.cpp : Defines the entry point for the console application.
+// LRUCache.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
 #include <iostream>
 
-#include "LRUCache1.h"
+#include "LRUCache2.h"
 
 using namespace std;
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
 	LRUCache<int, int> cache(3);
 
