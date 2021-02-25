@@ -10,13 +10,13 @@
 using namespace std;
 using namespace std::chrono;
 
-#include "FirstMissingPositive1.h"
+#include "FirstMissingPositive.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
 	Solution solution;
 
-	vector<int> nums = {1, 2, 0};
+	vector<int> nums = {-1, 2, 1, 1099};
 
 	cout << "["  << nums[0];
 	for (int i = 1; i < nums.size(); i++) {
@@ -28,7 +28,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Get starting timepoint 
 	auto start = high_resolution_clock::now();
 
-	int result = solution.firstMissingPositive(nums);
+	//int result = solution.firstMissingPositive(nums);
+	int result = solution.firstMissingPositive(nums.data(), nums.size());
 
 	// Get ending timepoint 
 	auto stop = high_resolution_clock::now();
